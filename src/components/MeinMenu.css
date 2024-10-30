@@ -1,0 +1,160 @@
+/* Загальний макет */
+.mein-menu {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #333;
+    padding: 20px;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.mein-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mein-menu-header h1 {
+    color: #66ccff;
+    font-size: 24px;
+}
+
+/* Головна сітка макету */
+.mein-menu-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    flex-grow: 1;
+    height: calc(100vh - 80px); /* Забезпечує заповнення доступного простору */
+}
+
+/* Ліва панель: Пройдені та незавершені секції */
+.sidebar-left {
+    background-color: #4d4d4d;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto; /* Додає скролінг при надлишку контенту */
+}
+
+.sidebar-left h2 {
+    color: #66ccff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.list-section {
+    margin-bottom: 20px;
+}
+
+.passed h2 {
+    color: #66ff66;
+}
+
+.failed h2 {
+    color: #ff6666;
+}
+
+.crossword-item {
+    background-color: #8c8c8c;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+/* Центральна секція: Популярні кросворди */
+.center-section {
+    background-color: #666;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.center-section h2 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.popular-crosswords {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.crossword-thumbnail {
+    text-align: center;
+    background-color: #8c8c8c;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.crossword-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.nickname-button {
+    background: none;
+    border: none;
+    color: #66ccff;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* Права панель: Кросворди користувача та кнопка + */
+.sidebar-right {
+    background-color: #4d4d4d;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.create-crossword-link {
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #4caf50;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.user-crosswords {
+    width: 100%;
+}
+
+.user-crosswords .crossword-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #b3cc00;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #333;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}

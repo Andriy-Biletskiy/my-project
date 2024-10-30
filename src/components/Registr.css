@@ -1,0 +1,57 @@
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #5a566e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    color: #ffffff;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f3a44c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #0c72bc;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: #f3a44c;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+.link-button:hover {
+    color: #0c72bc;
+}

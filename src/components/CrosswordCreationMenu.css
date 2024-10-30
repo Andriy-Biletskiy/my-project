@@ -1,0 +1,10 @@
+/* MeinMenu.css або CrosswordCreationMenu.css */
+.construction-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+    color: #f3a44c;
+    background-color: #5a566e;
+}

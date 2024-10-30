@@ -6,15 +6,10 @@ import styles from './Button.css';
 const Button = ({ children, isActive, ...restProperties }) => {
     let containerClassName = styles.container;
     if (isActive) {
-        // containerClassName = containerClassName + ' ' + styles.container;
-        // containerClassName += ' ' + styles.active;
         containerClassName = `${containerClassName} ${styles.active}`;
     }
 
     return (
-        // <button className={styles.container} onClick={restProperties.onClick} >
-        //     {children}
-        // </button>
         <button className={containerClassName} {...restProperties} >
             {children}
         </button>

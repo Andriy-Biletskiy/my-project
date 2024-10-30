@@ -1,78 +1,81 @@
-import Button from '@components/Button';
-import Header from '@components/Header';
-import Menu from '@components/Menu';
-import Tabs from '@components/Tabs';
-import List from '@components/List';
-import ListItem from '@components/ListItem';
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
-import styles from './App.css';
+import data from './bd';
+import Home from './components/Home';
+import Login from './components/Login';
+import Register from './components/Registr';
+import Quiz from './components/Quiz';
+import QuizSelection from './components/QuizSelection';
+import MeinMenu from './components/MeinMenu';
 
-const content = [
-    [
-        'React is extremely popular',
-        'It makes building complex, interactive UIs a breeze',
-        "It's powerful & flexible",
-        'It has a very active and versatile ecosystem',
-    ],
-    ['Components, JSX & Props', 'State', 'Hooks (e.g., useEffect())', 'Dynamic rendering'],
-    [
-        'Official web page (react.dev)',
-        'Next.js (Fullstack framework)',
-        'React Native (build native mobile apps with React)',
-    ],
-];
+function App() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-export default function App() {
-    const [activeContentIndex, setActiveContentIndex] = useState();
+    const handleLogin = (username, password) => {
+        const user = data.users.find(
+            (user) => user.username === username && user.password === password
+        );
+        if (user) {
+            setIsLoggedIn(true);
+            return true;
+        }
+        return false;
+    };
 
-    // let activeContentIndex = 0;
-    //
-    // const setActiveContentIndex = (activeIndex) => {
-    //     activeContentIndex = activeIndex;
-    //
-    //     console.log('setActiveContentIndex', activeIndex);
-    //     console.log('activeContentIndex', activeContentIndex);
-    // }
-
-    // let listContent = <h3>Please select one of the tabs</h3>;
-    // if (activeContentIndex !== undefined) {
-    //     listContent = (
-    //         <Tabs id="tab-content">
-    //             <List>
-    //                 {content[activeContentIndex].map((item) => (
-    //                     <ListItem key={item}>{item}</ListItem>
-    //                 ))}
-    //             </List>
-    //         </Tabs>
-    //     );
-    // }
+    const handleLogout = () => {
+        setIsLoggedIn(false);
+    };
 
     return (
-        <div className={styles.container}>
-            <div id="tabs" className={styles.tabs}>
-                <Header title="React.js" subTitle="i.e., using the React library for rendering the UI" />
-                <Menu>
-                    <Button isActive={activeContentIndex === 0} onClick={() => setActiveContentIndex(0)}>
-                        Why React?
-                    </Button>
-                    <Button isActive={activeContentIndex === 1} onClick={() => setActiveContentIndex(1)}>
-                        Core Features
-                    </Button>
-                    <Button isActive={activeContentIndex === 2} onClick={() => setActiveContentIndex(2)}>
-                        Related Resources
-                    </Button>
-                </Menu>
-                {/*{listContent}*/}
-                {activeContentIndex === undefined ? <h3>Please select one of the tabs</h3> : undefined }
-                {activeContentIndex === undefined ? undefined : <Tabs id="tab-content">
-                    <List>
-                        {content[activeContentIndex].map((item) => (
-                            <ListItem key={item}>{item}</ListItem>
-                        ))}
-                    </List>
-                </Tabs>}
+        <Router>
+            <div className="container">
+                <nav className="menu">
+                    <Link to="/">
+                        <button>Back</button>
+                    </Link>
+
+                    {isLoggedIn && (
+                        <Link to="/quiz-selection">
+                            <button>Select a Online-crossword</button>
+                        </Link>
+                    )}
+
+                    {isLoggedIn ? (
+                        <button onClick={handleLogout}>Logout</button>
+                    ) : (
+                        <Link to="/login">
+                            <button>Login</button>
+                        </Link>
+                    )}
+                </nav>
+
+                <main>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route
+                            path="/login"
+                            element={<Login onLogin={handleLogin} />}
+                        />
+                        <Route path="/mein-menu" element={<MeinMenu />} />
+                        <Route path="/registr" element={<Register />} />
+                        <Route
+                            path="/quiz-selection"
+                            element={
+                                isLoggedIn ? <QuizSelection /> : <Home />
+                            }
+                        />
+                        <Route
+                            path="/quiz/:id"
+                            element={
+                                isLoggedIn ? <Quiz /> : <Home />
+                            }
+                        />
+                    </Routes>
+                </main>
             </div>
-        </div>
+        </Router>
     );
 }
+
+export default App;
