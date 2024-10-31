@@ -1,27 +1,76 @@
-.login-container {
+.login-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    background-color: #5a566e;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 400px;
-    color: #ffffff;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
 }
 
-.input-group {
+h2 {
+    color: #333;
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.login-box::after {
+    content: "";
+    display: block;
+    height: 40px;
+    background-color: #333;
+    border-radius: 0 0 10px 10px;
+    margin-top: 20px;
+}
+
+form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-bottom: 15px;
+    gap: 10px;
+    align-items: center;
 }
 
-.error-message {
-    color: #ff4d4d;
-    font-size: 14px;
+input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+.register-prompt {
     margin-top: 10px;
-    text-align: center;
+    font-size: 0.9rem;
+    color: #959595;
+}
+
+.register-link {
+    color: #4caf50;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.register-link:hover {
+    color: #388e3c;
 }

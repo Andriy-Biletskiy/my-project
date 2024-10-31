@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
-
+import { BrowserRouter as Router, Link, Route, Routes, useLocation } from 'react-router-dom';
 import data from './bd';
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Registr';
-import Quiz from './components/Quiz';
-import QuizSelection from './components/QuizSelection';
 import MeinMenu from './components/MeinMenu';
+import Crossword from './components/Crossword';
+import CrosswordCreationMenu from './components/CrosswordCreationMenu';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -23,58 +22,36 @@ function App() {
         return false;
     };
 
-    const handleLogout = () => {
-        setIsLoggedIn(false);
-    };
-
     return (
         <Router>
             <div className="container">
-                <nav className="menu">
-                    <Link to="/">
-                        <button>Back</button>
-                    </Link>
-
-                    {isLoggedIn && (
-                        <Link to="/quiz-selection">
-                            <button>Select a Online-crossword</button>
-                        </Link>
-                    )}
-
-                    {isLoggedIn ? (
-                        <button onClick={handleLogout}>Logout</button>
-                    ) : (
-                        <Link to="/login">
-                            <button>Login</button>
-                        </Link>
-                    )}
-                </nav>
-
+                <NavBar isLoggedIn={isLoggedIn} />
                 <main>
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route
-                            path="/login"
-                            element={<Login onLogin={handleLogin} />}
-                        />
+                        <Route path="/login" element={<Login onLogin={handleLogin} />} />
                         <Route path="/mein-menu" element={<MeinMenu />} />
                         <Route path="/registr" element={<Register />} />
-                        <Route
-                            path="/quiz-selection"
-                            element={
-                                isLoggedIn ? <QuizSelection /> : <Home />
-                            }
-                        />
-                        <Route
-                            path="/quiz/:id"
-                            element={
-                                isLoggedIn ? <Quiz /> : <Home />
-                            }
-                        />
+                        <Route path="/crossword" element={<Crossword />} />
+                        <Route path="/crossword-creation" element={<CrosswordCreationMenu />} />
                     </Routes>
                 </main>
             </div>
         </Router>
+    );
+}
+
+function NavBar({ isLoggedIn }) {
+    const location = useLocation();
+
+    return (
+        <nav className="menu">
+            {isLoggedIn && location.pathname !== '/mein-menu' && (
+                <Link to="/mein-menu">
+                    <button>MeinMenu</button>
+                </Link>
+            )}
+        </nav>
     );
 }
 
