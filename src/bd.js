@@ -1,3 +1,4 @@
+// bd.js
 const data = {
     users: [
         {
@@ -6,38 +7,17 @@ const data = {
             password: "1"
         }
     ],
-    quizzes: [
-        {
-            id: 1,
-            title: "General Knowledge",
-            questions: [
-                {
-                    questionId: 1,
-                    questionText: "What is the capital of France?",
-                    options: ["Paris", "London", "Rome", "Berlin"],
-                    answer: "Paris"
-                },
-                {
-                    questionId: 2,
-                    questionText: "Which planet is known as the Red Planet?",
-                    options: ["Earth", "Mars", "Jupiter", "Venus"],
-                    answer: "Mars"
-                },
-                {
-                    questionId: 3,
-                    questionText: "Who teaches Web Technologies and Web Design at the UZHNU?",
-                    options: ["Buchuk", "Sergiyko", "Vapnichniy", "Petsko"],
-                    answer: "Buchuk"
-                },
-                {
-                    questionId: 4,
-                    questionText: "AI - ...",
-                    options: ["Artificial intelligence", "Ancient Index", "Air Invasion"],
-                    answer: "Artificial intelligence"
-                }
-            ]
-        }
-    ]
+    crosswordData: {
+        questions: [
+            { question: "Яка на смак цукерка (7 букв).", answer: "СОЛОДКА" },
+            { question: "Матеріал для письма в Стародавньому Єгипті (7 букв).", answer: "ПАПІРУС" },
+            { question: "Рослина, з якої виготовляють рогожу (6 букв).", answer: "ОЧЕРЕТ" },
+            { question: "Що використовується для черпання рідини з відра (6 букв).", answer: "КОВШИК" },
+            { question: "Цукерка з карамеллю (6 букв).", answer: "ІРИСКА" },
+            { question: "Річка в Палестині, що має релігійне значення (6 букв).", answer: "ЙОРДАН" },
+        ],
+        secretWord: "СПОКІЙ"
+    }
 };
 
 export default data;

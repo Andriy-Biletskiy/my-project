@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Link, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import data from './bd';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -10,6 +10,7 @@ import CrosswordCreationMenu from './components/CrosswordCreationMenu';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const navigate = useNavigate(); // Отримуємо доступ до навігації
 
     const handleLogin = (username, password) => {
         const user = data.users.find(
@@ -22,22 +23,25 @@ function App() {
         return false;
     };
 
+    const handleLogout = () => {
+        setIsLoggedIn(false);
+        navigate('/');
+    };
+
     return (
-        <Router>
-            <div className="container">
-                <NavBar isLoggedIn={isLoggedIn} />
-                <main>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/login" element={<Login onLogin={handleLogin} />} />
-                        <Route path="/mein-menu" element={<MeinMenu />} />
-                        <Route path="/registr" element={<Register />} />
-                        <Route path="/crossword" element={<Crossword />} />
-                        <Route path="/crossword-creation" element={<CrosswordCreationMenu />} />
-                    </Routes>
-                </main>
-            </div>
-        </Router>
+        <div className="container" data-testid="app">
+            <NavBar isLoggedIn={isLoggedIn} />
+            <main>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login onLogin={handleLogin} />} />
+                    <Route path="/mein-menu" element={<MeinMenu onLogout={handleLogout} />} />
+                    <Route path="/registr" element={<Register />} />
+                    <Route path="/crossword" element={<Crossword />} />
+                    <Route path="/crossword-creation" element={<CrosswordCreationMenu />} />
+                </Routes>
+            </main>
+        </div>
     );
 }
 
@@ -55,4 +59,13 @@ function NavBar({ isLoggedIn }) {
     );
 }
 
-export default App;
+
+function AppWrapper() {
+    return (
+        <Router>
+            <App />
+        </Router>
+    );
+}
+
+export default AppWrapper;

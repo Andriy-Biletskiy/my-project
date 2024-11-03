@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './CrosswordCreationMenu.css';
+import './CrosswordCreationMenu.module.css';
 
 function CrosswordCreationMenu() {
     const [questions, setQuestions] = useState([{ question: "", answer: "" }]);

@@ -5,38 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1140df00-a88a-47cd-a4ac-7661ee07dc6a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/crosswords.cy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack.development.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.development.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.cy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.cy.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CrosswordCreationMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CrosswordCreationMenu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Crossword.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Crossword.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Crossword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Crossword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CrosswordCreationMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CrosswordCreationMenu.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CrosswordCreationMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CrosswordCreationMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/List/List.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/List/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListItem/ListItem.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListItem/ListItem.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListItem/ListItem.styled.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListItem/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MeinMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MeinMenu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MeinMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MeinMenu.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MeinMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MeinMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Quiz.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuizSelection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Registr.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Registr.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Registr.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Registr.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Registr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Registr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tabs/Tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tabs/Tabs.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tabs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +113,12 @@
       <workItem from="1730387959392" duration="10104000" />
       <workItem from="1730402052234" duration="912000" />
       <workItem from="1730403203878" duration="4860000" />
+      <workItem from="1730411050370" duration="1482000" />
+      <workItem from="1730451908689" duration="3645000" />
+      <workItem from="1730554114413" duration="3031000" />
+      <workItem from="1730562308953" duration="1937000" />
+      <workItem from="1730645012541" duration="299000" />
+      <workItem from="1730647834660" duration="18044000" />
     </task>
     <servers />
   </component>

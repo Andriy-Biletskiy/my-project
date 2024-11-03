@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Registr.css';
+import './Registr.module.css';
 
 function Register() {
     const [username, setUsername] = useState('');

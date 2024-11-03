@@ -1,17 +1,11 @@
+// components/Crossword.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Crossword.css';
+import './Crossword.module.css';
+import data from '../bd';
 
-const questions = [
-    { question: "Яка на смак цукерка.", answer: "СОЛОДКА" },
-    { question: "Матеріал для письма в Стародавньому Єгипті.", answer: "ПАПІРУС" },
-    { question: "Рослина, з якої виготовляють рогожу.", answer: "ОЧЕРЕТ" },
-    { question: "Що використовується для черпання рідини з відра.", answer: "КОВШИК" },
-    { question: "Цукерка з карамеллю.", answer: "ІРИСКА" },
-    { question: "Річка в Палестині, що має релігійне значення.", answer: "ЙОРДАН" },
-];
-
-const secretWord = "СПОКІЙ";
+const questions = data.crosswordData.questions;
+const secretWord = data.crosswordData.secretWord;
 
 function Crossword() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

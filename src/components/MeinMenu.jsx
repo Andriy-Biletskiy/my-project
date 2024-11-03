@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './MeinMenu.css';
+import './MeinMenu.module.css';
 
-function MeinMenu() {
+function MeinMenu({ onLogout }) {
     return (
         <div className="mein-menu">
             <header className="mein-menu-header">
@@ -15,9 +15,7 @@ function MeinMenu() {
             </div>
 
             <footer className="mein-menu-footer">
-                <Link to="/" className="logout-button">
-                    <button className="logout-button-style">Logout</button>
-                </Link>
+                <button onClick={onLogout} className="logout-button-style">Logout</button>
             </footer>
         </div>
     );
