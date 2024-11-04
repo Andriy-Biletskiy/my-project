@@ -1,0 +1,66 @@
+.mein-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.mein-menu-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-title {
+    font-size: 2rem;
+}
+
+.create-crossword-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #4caf50;
+}
+
+.instruction-text {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.my-crossword-button {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.my-crossword-button:hover {
+    background-color: #45a049;
+}
+
+.mein-menu-footer {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logout-button {
+    text-decoration: none;
+}
+
+.logout-button-style {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-button-style:hover {
+    background-color: #45a049;
+}

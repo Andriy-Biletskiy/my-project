@@ -1,0 +1,183 @@
+/* Основні стилі для body */
+body {
+    font-family: sans-serif;
+    background-color: #272727;
+    color: #d1ced7;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Контейнер, що розміщує контент і меню */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px; /* Додає відступи з боків на малих екранах */
+    margin: 0 auto; /* Центрує контейнер, якщо екран ширший за 1200px */
+}
+
+/* Стилі для логотипу та заголовку */
+.logo {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+/* Меню, яке містить кнопки */
+.menu {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє кнопкам переходити на новий рядок при малій ширині */
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+/* Стиль для кнопок */
+button {
+    padding: 10px 20px;
+    background-color: #f3a44c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin: 15px; /* Зменшений відступ між кнопками */
+    flex: 1 1 auto; /* Дозволяє кнопкам займати рівномірний простір у контейнері */
+    max-width: 200px; /* Обмежує максимальну ширину кожної кнопки */
+}
+
+button:hover {
+    background-color: #0c72bc;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Стилі для інпутів */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #278bd9;
+    outline: none;
+}
+
+/* Заголовки та текст */
+h1, h2, h3 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+p {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Блок для кросворду */
+.quiz {
+    margin: 20px;
+    padding: 20px;
+    background-color: #5a566e;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+/* Стилі для сторінок авторизації */
+.login-container,
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #5a566e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px; /* Встановлює максимальну ширину для центрованої форми */
+    color: #ffffff;
+    margin: 20px; /* Додає відступи з боків на малих екранах */
+}
+
+.login-box,
+.register-box {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Група для полів вводу */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #d1ced7;
+}
+
+/* Повідомлення про помилку */
+.error-message {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Посилання для переходу між формами */
+.signup-link,
+.login-link {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.signup-link a,
+.login-link a {
+    color: #f3a44c;
+    text-decoration: none;
+}
+
+.signup-link a:hover,
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопка для підтвердження у формі */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
